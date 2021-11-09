@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+    
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="MobileWeather.Views.ModifyUserPage"
+             xmlns:i18n="clr-namespace:MobileWeather.Helpers"
+             Title="{Binding Title}"
+             BackgroundColor="{StaticResource ColorBackground}">
+    
+    <StackLayout Padding="10">
+        <Label Text="{i18n:Translate FirstName}"/>
+        <Entry 
+            Keyboard="Text" 
+            Placeholder="Enter your first name" 
+            Text="{Binding FirstName}"/>
+        <Label Text="{i18n:Translate LastName}"/>
+        <Entry 
+            Keyboard="Text" 
+            Placeholder="Enter your last name"
+            Text="{Binding LastName}"/>
+        <Label Text="{i18n:Translate Address}"/>
+        <Entry
+            Keyboard="Text"
+            Placeholder="Enter you address"
+            Text="{Binding Address}"/>
+        <Label Text="{i18n:Translate FiscalNumber}"/>
+        <Entry
+            Keyboard="Text"
+            Placeholder="Enter your fiscal number"
+            Text="{Binding FiscalNumber}"/>
+        <Label Text="{i18n:Translate CitizenCardNumber}"/>
+        <Entry
+            Keyboard="Text"
+            Placeholder="Enter your citizen card number"
+            Text="{Binding CitizenCardNumber}"/>
+        <Label Text="{i18n:Translate Age}"/>
+        <Entry
+            Keyboard="Text"
+            Placeholder="Enter your age"
+            Text="{Binding Age}"/>
+        
+        <Button
+            Command="{Binding ModifyUserCommand}"
+            IsEnabled="{Binding IsEnabled}"
+            Text="{i18n:Translate Confirm}"/>
+    </StackLayout>
+
+</ContentPage>

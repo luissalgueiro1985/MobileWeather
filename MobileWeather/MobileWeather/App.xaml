@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<prism:PrismApplication xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             x:Class="MobileWeather.App">
+  <Application.Resources>
+
+    <!-- Application resource dictionary -->
+        <ResourceDictionary>
+            <!--  Colors  -->
+            <Color x:Key="ColorBackground">#89c2d9</Color>
+            <Color x:Key="ColorPrimary">#2c7da0</Color>
+            <Color x:Key="ColorSecondary">#468faf</Color>
+            <Color x:Key="ColorDanger">#014f86</Color>
+            <Color x:Key="ColorAccent">#014f86</Color>
+            <Color x:Key="ColorFont">#012a4a</Color>
+            <Color x:Key="ColorFontInverse">#F0F0F2</Color>
+
+            <!--  Styles  -->
+            <Style TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource ColorPrimary}" />
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+                <Setter Property="TextColor" Value="{StaticResource ColorFontInverse}" />
+            </Style>
+
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource ColorFont}" />
+            </Style>
+
+            <Style x:Key="SecondaryButton" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource ColorSecondary}" />
+            </Style>
+
+            <Style x:Key="DangerButton" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource ColorDanger}" />
+            </Style>
+
+        </ResourceDictionary>
+
+  </Application.Resources>
+</prism:PrismApplication>

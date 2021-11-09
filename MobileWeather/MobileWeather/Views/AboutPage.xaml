@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="MobileWeather.Views.AboutPage"
+             xmlns:i18n="clr-namespace:MobileWeather.Helpers"
+             BackgroundColor="{StaticResource ColorBackground}"
+             Title="{Binding Title}">
+
+    <AbsoluteLayout>
+        <StackLayout
+            AbsoluteLayout.LayoutBounds=".5,.2,.5,.5"
+            AbsoluteLayout.LayoutFlags="All">
+            <Image Source="luis"
+                   WidthRequest="200"
+                   Margin="50"/>
+            <Grid HorizontalOptions="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Label
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    FontAttributes="Bold"
+                    FontSize="Medium"
+                    Text="{i18n:Translate Author}" />
+                <Label
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    FontSize="Medium"
+                    Text="{Binding Author}" />
+                <Label
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    FontSize="Medium"
+                    FontAttributes="Bold"
+                    Text="{i18n:Translate Date}" />
+                <Label
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    FontSize="Medium"
+                    Text="{Binding Date,StringFormat='{0:dd-MM-yyy}'}" />
+                <Label
+                    Grid.Row="2"
+                    Grid.Column="0"
+                    FontAttributes="Bold"
+                    FontSize="Medium"
+                    Text="{i18n:Translate Version}" />
+                <Label
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    FontSize="Medium"
+                    Text="{Binding Version}" />
+            </Grid>
+        </StackLayout>
+    </AbsoluteLayout>
+  
+</ContentPage>
